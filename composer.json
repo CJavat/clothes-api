@@ -1,0 +1,19 @@
+{
+    "name": "itsis/clothes-api",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Itsis\\ClothesApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CJavatX",
+            "email": "cdpm98@hotmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.6",
+        "ramsey/uuid": "^4.7"
+    }
+}
