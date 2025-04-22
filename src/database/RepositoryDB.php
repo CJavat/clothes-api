@@ -12,13 +12,20 @@ class RepositoryDB extends BaseRepository implements RepositoryInterface
 
   public function __construct(string $table_name)
   {
+    parent::__construct();
     $this->table_name = $table_name;
   }
 
   public function get()
   {
-    //TODO: Falta de implementar.
-    echo "get";
+    $query = "SELECT * FROM " . $this->table_name;
+
+    $stmt = $this->pdo->prepare($query);
+    $stmt->execute();
+
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return [$data];
   }
 
   public function create($data)
@@ -27,10 +34,10 @@ class RepositoryDB extends BaseRepository implements RepositoryInterface
     print_r($data);
   }
 
-  public function update($id, $data)
+  public function update($data)
   {
     //TODO: Falta de implementar.
-    print_r($data, $id);
+    print_r($data);
   }
 
   public function delete($id)

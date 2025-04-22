@@ -1,19 +1,28 @@
 {
-    "name": "itsis/clothes-api",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Itsis\\ClothesApi\\": "src/"
-        }
+  "name": "itsis/clothes-api",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Itsis\\ClothesApi\\": "src/",
+      "app\\business\\category\\": "src/business/category/",
+      "app\\business\\cloth\\": "src/business/cloth/",
+      "app\\database\\": "src/database/",
+      "app\\exceptions\\": "src/exceptions/",
+      "app\\interfaces\\": "src/interfaces/",
+      "app\\validators\\": "src/validators/"
     },
-    "authors": [
-        {
-            "name": "CJavatX",
-            "email": "cdpm98@hotmail.com"
-        }
-    ],
-    "require": {
-        "bramus/router": "^1.6",
-        "ramsey/uuid": "^4.7"
+    "files": [
+      "src/config/database.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "CJavatX",
+      "email": "cdpm98@hotmail.com"
     }
+  ],
+  "require": {
+    "bramus/router": "^1.6",
+    "ramsey/uuid": "^4.7"
+  }
 }

@@ -7,7 +7,7 @@ use PDO;
 
 abstract class BaseRepository
 {
-  protected $pdo;
+  protected PDO $pdo;
 
   public function __construct()
   {
