@@ -14,9 +14,9 @@ class ClothGet
     $this->repository = $repository;
   }
 
-  public function get(string $id)
+  public function get()
   {
-    $this->repository->get();
+    return $this->repository->get();
   }
 }
 

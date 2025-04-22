@@ -14,9 +14,9 @@ class ClothDelete
     $this->repository = $repository;
   }
 
-  public function delete(string $id)
+  public function delete($id)
   {
-    if (!$this->repository->findById($id)) {
+    if (!$this->repository->findById($id)["exists"]) {
       throw new DataException("No existe la ropa que quieres eliminar");
     }
 

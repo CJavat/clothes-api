@@ -17,8 +17,8 @@ class CategoryDelete
 
   public function delete(string $id)
   {
-    if (!$this->repository->findById($id)) {
-      throw new DataException("La ropa que quieres eliminar no existe");
+    if (!$this->repository->findById($id)["exists"]) {
+      throw new DataException("La categoría que quieres eliminar no existe");
     }
 
     $this->repository->delete($id);

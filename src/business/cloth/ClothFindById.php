@@ -19,8 +19,7 @@ class ClothFindById
       return false;
     }
 
-    $this->repository->findById($id);
-    return true;
+    return $this->repository->findById($id);
   }
 }
 

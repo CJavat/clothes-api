@@ -25,7 +25,7 @@ class ClothUpdate
       throw new ValidationException($this->validator->getClothError());
     }
 
-    if (!$this->repository->findById($data["id"])) {
+    if (!$this->repository->findById($data["id"])["exists"]) {
       throw new DataException("No existe la ropa que quieres actualizar");
     }
 

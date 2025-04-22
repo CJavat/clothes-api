@@ -25,7 +25,7 @@ class CategoryUpdate
       throw new ValidationException($this->validator->getCategoryError());
     }
 
-    if ($this->repository->findById($data["id"])) {
+    if (!$this->repository->findById($data["id"])["exists"]) {
       throw new DataException("La categoría no existe");
     }
 
